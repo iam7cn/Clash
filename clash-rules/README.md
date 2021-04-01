@@ -72,96 +72,103 @@
 
 ```yaml
 rule-providers:
-  reject:
+  Reject: # 屏蔽网址
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Reject.list"
     path: ./ruleset/reject.yaml
-    interval: 86400
+    interval: 3600
 
-  icloud:
-    type: http
+  Icloud: # icloud网址
+    type: http  
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Icloud.list"
     path: ./ruleset/icloud.yaml
-    interval: 86400
+    interval: 3600
 
-  apple:
+  Apple: # apple网址
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Apple.list"
     path: ./ruleset/apple.yaml
-    interval: 86400
+    interval: 3600
 
-  google:
+  Google: # google网址
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Google.list"
     path: ./ruleset/google.yaml
-    interval: 86400
+    interval: 3600
 
-  proxy:
+  Proxy: # 代理网址
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Proxy.list"
     path: ./ruleset/proxy.yaml
-    interval: 86400
+    interval: 3600
 
-  direct:
+  Direct: # 直连网址
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Direct.list"
     path: ./ruleset/direct.yaml
-    interval: 86400
+    interval: 3600
 
-  private:
+  Private: # 自定义代理网址
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Private.list"
     path: ./ruleset/private.yaml
-    interval: 86400
+    interval: 3600
 
-  gfw:
+  GFW: # GFW网址
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/GFW.list"
     path: ./ruleset/gfw.yaml
-    interval: 86400
+    interval: 3600
 
-  greatfire:
+  Greatfire: # GFW网址
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Greatfire.list"
     path: ./ruleset/greatfire.yaml
-    interval: 86400
+    interval: 3600
 
-  tld-not-cn:
+  Tld-not-cn: # 非CN网址
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Tld-not-cn.list"
     path: ./ruleset/tld-not-cn.yaml
-    interval: 86400
+    interval: 3600
 
-  telegramcidr:
+  Telegramcidr: # TG IP地址
     type: http
     behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Telegramcidr.list"
     path: ./ruleset/telegramcidr.yaml
-    interval: 86400
+    interval: 3600
 
-  cncidr:
+  CNcidr: # china-ip地址
     type: http
     behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/CNcidr.list"
     path: ./ruleset/cncidr.yaml
-    interval: 86400
+    interval: 3600
 
-  lancidr:
+  Lancidr: # 内网IP地址
     type: http
     behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Lancidr.list"
     path: ./ruleset/lancidr.yaml
-    interval: 86400
+    interval: 3600  
+
+  BanAD: # 广告拦截
+    type: http
+    behavior: classical # domain, ipcidr or classical (premium core only)
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/BanAD.list"
+    path: ./ruleset/BanAD.yaml
+    interval: 3600
 ```
 
 #### 白名单模式 Rules 配置方式（推荐）
@@ -219,14 +226,15 @@ rules:
   - PROCESS-NAME,WebTorrent.exe,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,google,DIRECT
-  - RULE-SET,proxy,PROXY
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,Private,DIRECT
+  - RULE-SET,Reject,REJECT
+  - RULE-SET,Icloud,DIRECT
+  - RULE-SET,Apple,DIRECT
+  - RULE-SET,Google,DIRECT
+  - RULE-SET,Proxy,PROXY
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Telegramcidr,PROXY
+  - RULE-SET,BanAD,REJECT
   - GEOIP,,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,PROXY
@@ -285,12 +293,15 @@ rules:
   - PROCESS-NAME,WebTorrent.exe,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,tld-not-cn,PROXY
-  - RULE-SET,gfw,PROXY
-  - RULE-SET,greatfire,PROXY
-  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,Private,DIRECT
+  - RULE-SET,Reject,REJECT
+  - RULE-SET,Icloud,DIRECT
+  - RULE-SET,Apple,DIRECT
+  - RULE-SET,Google,DIRECT
+  - RULE-SET,Proxy,PROXY
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Telegramcidr,PROXY
+  - RULE-SET,BanAD,REJECT
   - MATCH,DIRECT
 ```
 
