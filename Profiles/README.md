@@ -76,4 +76,4 @@ proxy-providers:
 
 - [@Clash帮助文件](https://lancellc.gitbook.io/clash/)
 - [@Clash for Windows 帮助文件](https://docs.cfw.lbyczf.com/)
-- 
+- [Clash wiki](https://github.com/Dreamacro/clash/wiki/premium-core-features)
