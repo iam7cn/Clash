@@ -34,7 +34,7 @@ Clash 运行的依据是规则文件，系统会内置一个默认的规则文�
 
 配合目前很流行的ProxyPool项目 [@zu1k/ProxyPool](https://github.com/zu1k/proxypool) 和 [@sansui233/proxypool](https://github.com/sansui233/proxypool)
 
-#### Proxy-Providers 配置方式
+#### mini.yml 中 Proxy-Providers 配置方式
 
 ```yaml
 proxy-providers:
