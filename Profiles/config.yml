@@ -295,7 +295,7 @@ proxy-groups:
 proxy-providers:
   xiao7:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/xiao7.list"
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/sub.list"
     interval: 3600
     path: xiao7/xiao7.yaml
     health-check:
