@@ -26,6 +26,8 @@ Clash 运行的依据是规则文件，系统会内置一个默认的规则文�
 
 ​         [ACL4SSR 在线订阅转换](https://acl4ssr-sub.github.io/)
 
+​         [ACL4SSR 在线订阅接](https://acl4ssr.netlify.app/)
+
 ​         比如这个转换工具
 
 你也可以手动修正配置例子见  [Config.yml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/config.yml)
