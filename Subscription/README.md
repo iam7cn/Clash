@@ -1,4 +1,4 @@
-# subscription
+# Subscription
 收集网络上的SS/SSR/V2ray/Trojan公开的订阅
 
 |  工具  | Android  | Windows  | MacOS | iOS  |  
