@@ -177,7 +177,6 @@ rules:
   - PROCESS-NAME,v2ray,🎯 全球直连
   - DOMAIN,clash.razord.top,🎯 全球直连
   - DOMAIN,yacd.haishan.me,🎯 全球直连 
-  - DOMAIN,homedepot.com,🎯 全球直连  #仅适用与REX出口网
   - RULE-SET,Private,🎯 全球直连
   - RULE-SET,Reject,🛑 全球拦截
   - RULE-SET,Icloud,🎯 全球直连
