@@ -75,6 +75,20 @@ proxy-providers:
 
 [sspool.herokuapp.com](https://sspool.herokuapp.com/)
 
+[proxypool-guest997.herokuapp.com](https://proxypool-guest997.herokuapp.com/)
+
+[upan.tk](https://upan.tk/)
+
+[free.dswang.ga](https://free.dswang.ga/)
+
+
+
+
+
+
+
+
+
 # 客户端的使用
 
 
