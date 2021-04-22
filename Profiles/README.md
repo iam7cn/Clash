@@ -64,8 +64,11 @@ Clash 运行的依据是规则文件，系统会内置一个默认的规则文�
 
 如果你觉得太复杂可以使用 [mini.yml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/mini.yml)
 
-测试配置  可直接导入到CFW https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml
-<button data-copy="https://free.iam7.tk/clash/proxies" onclick="onCopyThis(this)" class="button is-small is-primary">复制订阅</button>
+测试配置  可直接导入到CFW [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml)
+
+
+[img]
+
 
 
 
