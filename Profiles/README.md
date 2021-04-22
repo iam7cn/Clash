@@ -66,7 +66,7 @@ Clash 运行的依据是规则文件，系统会内置一个默认的规则文�
 
 测试配置  可直接导入到CFW [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml)
 
-[image](https://user-images.githubusercontent.com/23691239/115669902-63774d80-a37b-11eb-8912-7a8930a128be.png)
+<img src="https://user-images.githubusercontent.com/23691239/115669902-63774d80-a37b-11eb-8912-7a8930a128be.png" alt="测试配置" width="200">
 
 
 配合目前很流行的ProxyPool项目 [@zu1k/ProxyPool](https://github.com/zu1k/proxypool) 和 [@sansui233/proxypool](https://github.com/sansui233/proxypool)
