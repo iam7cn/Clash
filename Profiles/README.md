@@ -64,7 +64,7 @@ Clash 运行的依据是规则文件，系统会内置一个默认的规则文�
 
 如果你觉得太复杂可以使用 [mini.yml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/mini.yml)
 
-测试配置 https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml 
+测试配置 [导入CFW](clash://install-config?url=https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml)       https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml 
 
 
 
