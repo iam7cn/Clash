@@ -65,6 +65,7 @@ Clash 运行的依据是规则文件，系统会内置一个默认的规则文�
 如果你觉得太复杂可以使用 [mini.yml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/mini.yml)
 
 测试配置  可直接导入到CFW [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml)
+
          安卓clash [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/gfw-cfa.yaml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/gfw-cfa.yaml)
 
 <img src="https://user-images.githubusercontent.com/23691239/115669902-63774d80-a37b-11eb-8912-7a8930a128be.png" alt="测试配置" width="800">
