@@ -13,6 +13,8 @@ Clash配置文件及规则
 
 ::: tip
 如无特殊说明，缩写**CFW**指代 Clash for Windows
+
 推荐用Clash for Windows
+
 由于个人精力有限，欢迎一起参与完善
 :::
