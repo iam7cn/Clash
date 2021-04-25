@@ -1,0 +1,7 @@
+payload:
+  #GitHub
+
+  - DOMAIN-KEYWORD,github,GitHub
+  - DOMAIN-KEYWORD,githubusercontent,GitHub
+  - DOMAIN-SUFFIX,github.com,GitHub
+  - DOMAIN-SUFFIX,githubassets.com,GitHub
