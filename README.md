@@ -1,5 +1,6 @@
-# Clash
-Clash配置文件及规则
+# Readme
+
+主要分享Clash配置文件及规则/Proxypool项目抓取地址
 
 
 ### 名词
