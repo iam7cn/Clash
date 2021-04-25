@@ -7,7 +7,7 @@ Clash配置文件及规则
 ### 名词
 
 - Clash：一个 Go 语言开发的多平台代理客户端，[Github](https://github.com/Dreamacro/clash)
-- ClashX：Clash 的 Mac 图形客户端，[Github](https://github.com/yichengchen/clashX)
+- ClashX：Clash 的 Mac 图形客户端，[Github](https://github.com/yichengchen/clashX)   [APP center](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public)
 - ClashForAndroid：Clash 的 Android 图形客户端，[Github](https://github.com/Kr328/ClashForAndroid)
 - Clash for Windows：Clash 的 Windows/macOS 图形客户端，[Github](https://github.com/Fndroid/clash_for_windows_pkg)
 - Clash for Windows 汉化：[蓝奏云](https://shenweb.lanzous.com/b00ueejle) 密码:0573
