@@ -48,18 +48,18 @@ proxy-groups:
   - name: ♻️ 自动选择
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
-    interval: 300
+    interval: 60
     use:
       - sub
 proxy-providers:
   sub:
     type: http
     url: "https://free.kingfu.cf/clash/proxies?c=TW,CN,HK,JP,SG&speed=10" # 替换自己的节点
-    interval: 3600
+    interval: 240
     path: xiao7/sub.yaml
     health-check:
       enable: true
-      interval: 600
+      interval: 60
       url: http://www.gstatic.com/generate_204
       
 rules:
