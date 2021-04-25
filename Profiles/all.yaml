@@ -1,0 +1,493 @@
+# 所有节点均从公开互联网上抓取，使用clash自动检查可用性即可
+# 配置文件已开源： https://github.com/iam7cn/Clash
+
+# port of HTTP
+port: 7890
+
+# port of SOCKS5
+socks-port: 7891
+
+# (HTTP and SOCKS5 in one port)
+# mixed-port: 7890
+
+# redir port for Linux and macOS
+# redir-port: 7892
+
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+proxies:
+
+proxy-groups:
+  - name: 🎯 全局选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🏳️‍🌈 选择国家
+      - 💱 选择类型
+      - 🚀 选择速度
+      - 👉 选择节点
+      - 🔃 失败切换
+      - 🔀 负载均衡
+      - 🌐 全球直连
+  - name: 👉 选择节点
+    type: select
+    use:
+      - all      
+  - name: 🏳️‍🌈 选择国家
+    type: select
+    proxies:
+      - 🇨🇳 中国节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点     
+      - 🇨🇳 亚洲节点
+      - 🇺🇸 北美节点
+      - 🇦🇺 澳洲节点
+      - 🇬🇧 欧洲节点
+      - 🏴‍☠️ 其他国家
+  - name: 💱 选择类型
+    type: select
+    proxies:
+      - ♠️ SS节点
+      - ♣️ SSR节点
+      - ♥️ V2ray节点
+      - ♦️ Trojan节点
+  - name: 🚀 选择速度
+    type: select
+    proxies:
+      - 🚓 Speed节点
+      - 🚑 中转节点
+      - 🚒 Pool节点
+  - name: 📲 电报消息
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 📹 油管视频
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 🎥 奈飞视频
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 🎬 哔哩哔哩
+    type: select
+    proxies:
+      - 🌐 全球直连
+      - ♻️ 自动选择      
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连       
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - 🌐 全球直连
+      - ♻️ 自动选择
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: Ⓜ️ 微软云盘
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🇨🇳 中国节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - China
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - HongKong
+  - name: 🇹🇼 台湾节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Taiwan
+  - name: 🚓 Speed节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Speed      
+  - name: 🚑 中转节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Relay 
+  - name: 🚒 Pool节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Pool  
+  - name: ♠️ SS节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - ss
+  - name: ♣️ SSR节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - ssr
+  - name: ♥️ V2ray节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - v2ray
+  - name: ♦️ Trojan节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - trojan      
+  - name: 🇨🇳 亚洲节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Asia
+  - name: 🇺🇸 北美节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - America
+  - name: 🇦🇺 澳洲节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Oceania
+  - name: 🇬🇧 欧洲节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Europe
+  - name: 🏴‍☠️ 其他国家
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - others
+  - name: ♻️ 自动选择
+    type: url-test
+    use:
+      - all
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+  - name: 🔀 负载均衡
+    type: load-balance
+    use:
+      - all
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+  - name: 🔃 失败切换
+    type: fallback
+    use:
+      - all
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+  - name: 🌐 全球直连
+    type: select
+    proxies:
+      - DIRECT
+
+proxy-providers:
+  China:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?c=CN&speed=5"
+    path: proxy_provider/provider-China.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+  HongKong:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?c=HK&speed=5"
+    path: proxy_provider/provider-HongKong.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  Taiwan:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?c=TW&speed=5"
+    path: proxy_provider/provider-Taiwan.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204 
+  Speed:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?speed=10"
+    path: proxy_provider/provider-Speed.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204      
+  Relay:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?filter=1&speed=5"
+    path: proxy_provider/provider-Relay.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  Pool:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?filter=2&speed=5"
+    path: proxy_provider/provider-Pool.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204 
+  ss:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?type=ss&speed=5"
+    path: proxy_provider/provider-ss.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  ssr:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?type=ssr&speed=5"
+    path: proxy_provider/provider-ssr.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  v2ray:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?type=vmess&speed=5"
+    path: proxy_provider/provider-vmess.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204 
+  trojan:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?type=trojan&speed=5"
+    path: proxy_provider/provider-trojan.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204      
+  Asia:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?c=JP,KR,RU,SG,IN,VN,TH,MY,PH,ID,NZ&speed=5"
+    path: proxy_provider/provider-Asia.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204      
+  America:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?c=US,CA,MX&speed=5"
+    path: proxy_provider/provider-America.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  Oceania:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?c=AU,NL&speed=5"
+    path: proxy_provider/provider-Oceania.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  Europe:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?c=DE,GB,FR,DK,ES,FZ,EE,HR,LT,LU,AL,CH,BE,FI&speed=5"
+    path: proxy_provider/provider-Europe.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  others:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?nc=CN,HK,TW,JP,KR,RU,SG,IN,VN,TH,MY,PH,ID,NZ,US,CA,MX,AU,NL,DE,GB,FR,DK,ES,FZ,EE,HR,LT,LU,AL,CH,BE,FI&speed=5"
+    path: proxy_provider/provider-others.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  all:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?speed=1"
+    path: proxy_provider/provider.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+
+rule-providers:
+  Reject: # 屏蔽网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Reject.list"
+    path: rule_provider/reject.yaml
+    interval: 3600
+
+  Icloud: # icloud网址
+    type: http  
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Icloud.list"
+    path: rule_provider/icloud.yaml
+    interval: 3600
+
+  Apple: # apple网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Apple.list"
+    path: rule_provider/apple.yaml
+    interval: 3600
+
+  Google: # google网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Google.list"
+    path: rule_provider/google.yaml
+    interval: 3600
+
+  Proxy: # 代理网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Proxy.list"
+    path: rule_provider/proxy.yaml
+    interval: 3600
+
+  Direct: # 直连网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Direct.list"
+    path: rule_provider/direct.yaml
+    interval: 3600
+
+  Private: # 自定义代理网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Private.list"
+    path: rule_provider/private.yaml
+    interval: 3600
+
+  GFW: # GFW网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/GFW.list"
+    path: rule_provider/gfw.yaml
+    interval: 3600
+
+  Greatfire: # GFW网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Greatfire.list"
+    path: rule_provider/greatfire.yaml
+    interval: 3600
+
+  Tld-not-cn: # 非CN网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Tld-not-cn.list"
+    path: rule_provider/tld-not-cn.yaml
+    interval: 3600
+
+  Telegramcidr: # TG IP地址
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Telegramcidr.list"
+    path: rule_provider/telegramcidr.yaml
+    interval: 3600
+
+  CNcidr: # china-ip地址
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/CNcidr.list"
+    path: rule_provider/cncidr.yaml
+    interval: 3600
+
+  Lancidr: # 内网IP地址
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Lancidr.list"
+    path: rule_provider/lancidr.yaml
+    interval: 3600  
+
+  BanAD: # 广告拦截
+    type: http
+    behavior: classical # domain, ipcidr or classical (premium core only)
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/BanAD.list"
+    path: rule_provider/BanAD.yaml
+    interval: 3600
+    
+rules:   
+  - RULE-SET,Private,DIRECT
+  - RULE-SET,Reject,REJECT
+  - RULE-SET,Icloud,DIRECT
+  - RULE-SET,Apple,DIRECT
+  - RULE-SET,Google,DIRECT
+  - RULE-SET,Proxy,♻️ 自动选择
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Telegramcidr,♻️ 自动选择
+  - RULE-SET,BanAD,REJECT
+  - GEOIP,,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,♻️ 自动选择   
