@@ -67,11 +67,11 @@ proxy-providers:
   node:
     type: http
     url: "https://free.kingfu.cf/clash/proxies?speed=10" # 替换自己的节点
-    interval: 3600
+    interval: 240
     path: github/node.yaml
     health-check:
       enable: true
-      interval: 600
+      interval: 60
       url: http://www.gstatic.com/generate_204
       
 rule-providers:
