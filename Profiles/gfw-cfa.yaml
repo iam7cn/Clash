@@ -67,7 +67,7 @@ proxy-groups:
 proxy-providers:
   node:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?filter=3&c=CN,HK,TW,JP,KR,SG,US&speed=10" # 替换自己的节点
+    url: "https://free.kingfu.cf/clash/proxies?filter=3&c=CN,HK,TW,JP,KR,SG,US,ZZ&speed=10" # 替换自己的节点
     interval: 240
     path: github/node.yaml
     health-check:
