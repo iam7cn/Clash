@@ -66,7 +66,7 @@ Clash 运行的依据是规则文件，系统会内置一个默认的规则文�
 
 测试配置  可直接导入到Clash
 
-简易版 [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/test.yaml)
+简易版 [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/easy.yaml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/easy.yaml)
 
 完整版 [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/all.yaml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/all.yaml)
 

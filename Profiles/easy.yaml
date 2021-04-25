@@ -1,0 +1,203 @@
+# 所有节点均从公开互联网上抓取，使用clash自动检查可用性即可
+# 配置地址： https://github.com/iam7cn/Clash
+
+# port of HTTP
+port: 7890
+
+# port of SOCKS5
+socks-port: 7891
+
+# (HTTP and SOCKS5 in one port)
+# mixed-port: 7890
+
+# redir port for Linux and macOS
+# redir-port: 7892
+
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  
+proxy-groups:
+  - name: 🎯 全局选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 👉 选择节点
+      - 🔀 负载均衡
+      - 🔃 失败切换
+      - 🌐 全球直连       
+  - name: 👉 选择节点
+    type: select
+    use:
+      - node
+  - name: ♻️ 自动选择
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - node
+  - name: 🔀 负载均衡
+    type: load-balance
+    use:
+      - node
+    url: 'http://www.gstatic.com/generate_204'
+  - name: 🌐 全球直连
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🔃 失败切换
+    type: fallback
+    use:
+      - node
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120      
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+proxy-providers:
+  node:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?speed=10" # 替换自己的节点
+    interval: 240
+    path: github/node.yaml
+    health-check:
+      enable: true
+      interval: 60
+      url: http://www.gstatic.com/generate_204
+      
+rule-providers:
+  Reject: # 屏蔽网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Reject.list"
+    path: ./ruleset/reject.yaml
+    interval: 3600
+
+  Icloud: # icloud网址
+    type: http  
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Icloud.list"
+    path: ./ruleset/icloud.yaml
+    interval: 3600
+
+  Apple: # apple网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Apple.list"
+    path: ./ruleset/apple.yaml
+    interval: 3600
+
+  Google: # google网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Google.list"
+    path: ./ruleset/google.yaml
+    interval: 3600
+
+  Proxy: # 代理网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Proxy.list"
+    path: ./ruleset/proxy.yaml
+    interval: 3600
+
+  Direct: # 直连网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Direct.list"
+    path: ./ruleset/direct.yaml
+    interval: 3600
+
+  Private: # 自定义代理网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Private.list"
+    path: ./ruleset/private.yaml
+    interval: 3600
+
+  GFW: # GFW网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/GFW.list"
+    path: ./ruleset/gfw.yaml
+    interval: 3600
+
+  Greatfire: # GFW网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Greatfire.list"
+    path: ./ruleset/greatfire.yaml
+    interval: 3600
+
+  Tld-not-cn: # 非CN网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Tld-not-cn.list"
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 3600
+
+  Telegramcidr: # TG IP地址
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Telegramcidr.list"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 3600
+
+  CNcidr: # china-ip地址
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/CNcidr.list"
+    path: ./ruleset/cncidr.yaml
+    interval: 3600
+
+  Lancidr: # 内网IP地址
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Lancidr.list"
+    path: ./ruleset/lancidr.yaml
+    interval: 3600  
+
+  BanAD: # 广告拦截
+    type: http
+    behavior: classical # domain, ipcidr or classical (premium core only)
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/BanAD.list"
+    path: ./ruleset/BanAD.yaml
+    interval: 3600
+    
+rules:
+#DOMAIN-SUFFIX：域名后缀匹配
+#DOMAIN：域名匹配
+#DOMAIN-KEYWORD：域名关键字匹配
+#IP-CIDR：IP 段匹配
+#SRC-IP-CIDR：源 IP 段匹配
+#GEOIP：GEOIP 数据库（国家代码）匹配
+#DST-PORT：目标端口匹配
+#SRC-PORT：源端口匹配
+#PROCESS-NAME：源进程名匹配
+#RULE-SET：Rule Provider 规则匹配
+#MATCH：全匹配
+  - DOMAIN-SUFFIX,acl4ssr,🌐 全球直连
+  - PROCESS-NAME,v2ray,🌐 全球直连
+  - DOMAIN,clash.razord.top,🌐 全球直连
+  - DOMAIN,yacd.haishan.me,🌐 全球直连 
+  - RULE-SET,Private,🌐 全球直连
+  - RULE-SET,Reject,🛑 全球拦截
+  - RULE-SET,Icloud,🌐 全球直连
+  - RULE-SET,Apple,🌐 全球直连
+  - RULE-SET,Google,🌐 全球直连
+  - RULE-SET,Proxy,♻️ 自动选择
+  - RULE-SET,Direct,🌐 全球直连
+  - RULE-SET,Telegramcidr,♻️ 自动选择
+  - RULE-SET,BanAD,🛑 全球拦截
+  - GEOIP,,🌐 全球直连
+  - GEOIP,CN,🌐 全球直连
+  - MATCH,♻️ 自动选择
