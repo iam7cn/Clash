@@ -122,6 +122,8 @@ proxy-providers:
 
 [6166888.xyz](https://6166888.xyz/)
 
+[https://proxypool.fly.dev](https://proxypool.fly.dev/clash/proxies)
+
 
 
 # 客户端的使用
