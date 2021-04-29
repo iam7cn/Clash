@@ -56,7 +56,7 @@ proxy-providers:
     type: http
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/sub.list" # 替换自己的节点
     interval: 3600
-    path: xiao7/sub.yaml
+    path: proxy_provider/sub.yaml
     health-check:
       enable: true
       interval: 600
@@ -67,98 +67,98 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Reject.list"
-    path: ./ruleset/reject.yaml
+    path: proxy_provider/reject.yaml
     interval: 3600
 
   Icloud: # icloud网址
     type: http  
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Icloud.list"
-    path: ./ruleset/icloud.yaml
+    path: proxy_provider/icloud.yaml
     interval: 3600
 
   Apple: # apple网址
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Apple.list"
-    path: ./ruleset/apple.yaml
+    path: proxy_provider/apple.yaml
     interval: 3600
 
   Google: # google网址
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Google.list"
-    path: ./ruleset/google.yaml
+    path: proxy_provider/google.yaml
     interval: 3600
 
   Proxy: # 代理网址
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Proxy.list"
-    path: ./ruleset/proxy.yaml
+    path: proxy_provider/proxy.yaml
     interval: 3600
 
   Direct: # 直连网址
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Direct.list"
-    path: ./ruleset/direct.yaml
+    path: proxy_provider/direct.yaml
     interval: 3600
 
   Private: # 自定义代理网址
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Private.list"
-    path: ./ruleset/private.yaml
+    path: proxy_provider/private.yaml
     interval: 3600
 
   GFW: # GFW网址
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/GFW.list"
-    path: ./ruleset/gfw.yaml
+    path: proxy_provider/gfw.yaml
     interval: 3600
 
   Greatfire: # GFW网址
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Greatfire.list"
-    path: ./ruleset/greatfire.yaml
+    path: proxy_provider/greatfire.yaml
     interval: 3600
 
   Tld-not-cn: # 非CN网址
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Tld-not-cn.list"
-    path: ./ruleset/tld-not-cn.yaml
+    path: proxy_provider/tld-not-cn.yaml
     interval: 3600
 
   Telegramcidr: # TG IP地址
     type: http
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Telegramcidr.list"
-    path: ./ruleset/telegramcidr.yaml
+    path: proxy_provider/telegramcidr.yaml
     interval: 3600
 
   CNcidr: # china-ip地址
     type: http
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/CNcidr.list"
-    path: ./ruleset/cncidr.yaml
+    path: proxy_provider/cncidr.yaml
     interval: 3600
 
   Lancidr: # 内网IP地址
     type: http
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Lancidr.list"
-    path: ./ruleset/lancidr.yaml
+    path: proxy_provider/lancidr.yaml
     interval: 3600  
 
   BanAD: # 广告拦截
     type: http
     behavior: classical # domain, ipcidr or classical (premium core only)
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/BanAD.list"
-    path: ./ruleset/BanAD.yaml
+    path: proxy_provider/BanAD.yaml
     interval: 3600
     
 rules:
