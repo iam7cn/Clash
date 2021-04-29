@@ -72,6 +72,8 @@ Clash 运行的依据是规则文件，系统会内置一个默认的规则文�
 
 手机版 [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/gfw-cfa.yaml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/gfw-cfa.yaml)
 
+OpenClash [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/all.yaml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/all.yaml)
+
 <img src="https://user-images.githubusercontent.com/23691239/115669902-63774d80-a37b-11eb-8912-7a8930a128be.png" alt="测试配置" width="800">
 
 
