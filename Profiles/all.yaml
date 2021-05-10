@@ -115,7 +115,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择      
       - 🌐 全球直连
-  - name: 🛑 广告拦截
+  - name: 🛑 全球拦截
     type: select
     proxies:
       - REJECT
@@ -386,6 +386,13 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Reject.list"
     path: rule_provider/reject.yaml
     interval: 3600
+    
+  Pter: # PT直连网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Pter.list"
+    path: ./ruleset/Pter.yaml
+    interval: 3600
 
   Icloud: # icloud网址
     type: http  
@@ -479,15 +486,16 @@ rule-providers:
     interval: 3600
     
 rules:   
-  - RULE-SET,Private,DIRECT
-  - RULE-SET,Reject,REJECT
-  - RULE-SET,Icloud,DIRECT
-  - RULE-SET,Apple,DIRECT
-  - RULE-SET,Google,DIRECT
+  - RULE-SET,Private,🌐 全球直连
+  - RULE-SET,Reject,🛑 全球拦截
+  - RULE-SET,Pter,🌐 全球直连
+  - RULE-SET,Icloud,🌐 全球直连
+  - RULE-SET,Apple,🌐 全球直连
+  - RULE-SET,Google,🌐 全球直连
   - RULE-SET,Proxy,♻️ 自动选择
-  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Direct,🌐 全球直连
   - RULE-SET,Telegramcidr,♻️ 自动选择
-  - RULE-SET,BanAD,REJECT
-  - GEOIP,,DIRECT
-  - GEOIP,CN,DIRECT
+  - RULE-SET,BanAD,🛑 全球拦截
+  - GEOIP,,🌐 全球直连
+  - GEOIP,CN,🌐 全球直连
   - MATCH,♻️ 自动选择   

@@ -81,6 +81,13 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Reject.list"
     path: proxy_provider/reject.yaml
     interval: 3600
+    
+  Pter: # PT直连网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Pter.list"
+    path: ./ruleset/Pter.yaml
+    interval: 3600
 
   Icloud: # icloud网址
     type: http  
@@ -190,6 +197,7 @@ rules:
   - DOMAIN,clash.razord.top,🌐 全球直连
   - DOMAIN,yacd.haishan.me,🌐 全球直连 
   - RULE-SET,Private,🌐 全球直连
+  - RULE-SET,Pter,🌐 全球直连
   - RULE-SET,Reject,🛑 全球拦截
   - RULE-SET,Icloud,🌐 全球直连
   - RULE-SET,Apple,🌐 全球直连
