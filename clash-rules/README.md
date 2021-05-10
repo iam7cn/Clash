@@ -25,6 +25,9 @@
 - **直连域名列表 Direct.list**：
   - [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Direct.list](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Direct.list)
 
+- **PT直连域名列表 Pter.list**：
+  - [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Pter.list](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Pter.list)
+
 - **代理域名列表 Proxy.list**：
   - [https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Proxy.list](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Proxy.list)
   
@@ -78,6 +81,13 @@ rule-providers:
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Reject.list"
     path: ./ruleset/reject.yaml
+    interval: 3600
+    
+  Pter: # PT直连网址
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/clash-rules/Pter.list"
+    path: ./ruleset/Pter.yaml
     interval: 3600
 
   Icloud: # icloud网址
@@ -195,7 +205,7 @@ rules:
   - PROCESS-NAME,trojan.exe,DIRECT
   - PROCESS-NAME,trojan-go.exe,DIRECT
   - PROCESS-NAME,ss-local.exe,DIRECT
-  - PROCESS-NAME,privoxy.exe,DIRECT
+  - PROCESS-NAME,privoxy.exe,DIRECT  
   - PROCESS-NAME,leaf.exe,DIRECT
   - PROCESS-NAME,Surge,DIRECT
   - PROCESS-NAME,Surge 2,DIRECT
@@ -228,6 +238,7 @@ rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,Private,DIRECT
+  - RULE-SET,Pter,DIRECT
   - RULE-SET,Reject,REJECT
   - RULE-SET,Icloud,DIRECT
   - RULE-SET,Apple,DIRECT
@@ -295,6 +306,7 @@ rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,Private,DIRECT
+  - RULE-SET,Pter,DIRECT
   - RULE-SET,Reject,REJECT
   - RULE-SET,Icloud,DIRECT
   - RULE-SET,Apple,DIRECT
