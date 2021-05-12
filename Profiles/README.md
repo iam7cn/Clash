@@ -60,9 +60,9 @@ Clash 运行的依据是规则文件，系统会内置一个默认的规则文�
 
 ​         比如这个转换工具
 
-你也可以手动修正配置例子见  [Config.yml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/config.yml)
+你也可以手动修正配置例子见  [Config.yaml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/config.yaml)
 
-如果你觉得太复杂可以使用 [mini.yml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/mini.yml)
+如果你觉得太复杂可以使用 [mini.yaml](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/mini.yaml)
 
 测试配置  可直接导入到Clash
 
@@ -106,25 +106,45 @@ proxy-providers:
 
 [Free Proxies (proxypoolsstest.herokuapp.com)](https://proxypoolsstest.herokuapp.com/) --已停
 
-[hm2019721.ml](https://hm2019721.ml/)
+[[Free Proxies (hm2019721.ml)](https://hm2019721.ml/)
 
-[fq.lonxin.net](https://fq.lonxin.net/)
+[[Free Proxies (yugogogogo.tk)](https://www.yugogogogo.tk/)
 
-[proxypool.ednovas.xyz](https://proxypool.ednovas.xyz/)
+[Free Proxies (proxypoolv2.herokuapp.com)](https://proxypoolv2.herokuapp.com/)
 
-[sspool.herokuapp.com](https://sspool.herokuapp.com/)
+[[Free Proxies (fq.lonxin.net)](https://fq.lonxin.net/)
 
-[proxypool-guest997.herokuapp.com](https://proxypool-guest997.herokuapp.com/)
+[[Free Proxies (proxypool.ednovas.xyz)](https://proxypool.ednovas.xyz/)
 
-[upan.tk](https://upan.tk/)
+[[Free Proxies (sspool.herokuapp.com)](https://sspool.herokuapp.com/)
 
-[free.dswang.ga](https://free.dswang.ga/)
+[[Free Proxies (proxypool-guest997.herokuapp.com)](https://proxypool-guest997.herokuapp.com/)
 
-[sspool.nl](https://sspool.nl/)
+[[Free Proxies (upan.tk)](https://upan.tk/)
 
-[6166888.xyz](https://6166888.xyz/)
+[[Free Proxies (free.dswang.ga)](https://free.dswang.ga/)
 
-[proxypool.fly.dev](https://proxypool.fly.dev/clash/proxies)
+[[Free Proxies (sspool.nl)](https://sspool.nl/)
+
+[[Free Proxies (6166888.xyz)](https://6166888.xyz/)
+
+[[Free Proxies (proxypool.fly.dev)](https://proxypool.fly.dev/clash/proxies)
+
+[Free Proxies (hellopool.herokuapp.com)](https://hellopool.herokuapp.com/)
+
+[免费节点 (proxypooliu.herokuapp.com)](https://proxypooliu.herokuapp.com/)
+
+[免费节点 (free886.herokuapp.com)](https://free886.herokuapp.com/)
+
+[Free Proxies (luoml.eu.org)](https://emby.luoml.eu.org/)
+
+[Free Proxies (ditan.ml)](https://ditan.ml/)
+
+[Free Proxies (linbaoz.com)](https://www.linbaoz.com/)
+
+[Free Proxies (purel.in)](https://proxy.purel.in/)
+
+
 
 
 
@@ -136,3 +156,6 @@ proxy-providers:
 - [@Clash帮助文件](https://lancellc.gitbook.io/clash/)
 - [@Clash for Windows 帮助文件](https://docs.cfw.lbyczf.com/)
 - [Clash wiki](https://github.com/Dreamacro/clash/wiki/premium-core-features)
+- [@Sansui233](https://github.com/Sansui233/proxypool)
+- [@zu1k](https://github.com/zu1k)
+- 

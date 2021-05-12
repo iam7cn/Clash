@@ -1,5 +1,5 @@
 ﻿# 所有节点均从公开互联网上抓取，使用clash自动检查可用性即可
-# 配置地址： https://github.com/iam7cn/Clash 
+# 配置地址： https://github.com/iam7cn/Clash
 
 # port of HTTP
 port: 7890
@@ -20,39 +20,21 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {"name":"🇨🇳 CN_001","server":"192.168.1.1","type":"ss","country":"🇨🇳 CN","port":443,"password":"iam7.cn","cipher":"aes-128-gcm","plugin":"obfs","plugin-opts":{"host":"www.iam7.cn","mode":"tls"}} 
 proxy-groups:
-  - name: 🎯 全局选择
+  - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
-      - 👉 选择节点
-      - 🔀 负载均衡
-      - 🔃 失败切换
-      - 🌐 全球直连       
-  - name: 👉 选择节点
+      - 👉 手动选择
+      - DIRECT 
+  - name: 👉 手动选择
     type: select
     use:
-      - node
-  - name: ♻️ 自动选择
-    type: url-test
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 120
-    use:
-      - node
-  - name: 🔀 负载均衡
-    type: load-balance
-    use:
-      - node
-    url: 'http://www.gstatic.com/generate_204'
-  - name: 🌐 全球直连
+      - sub
+  - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
-  - name: 🔃 失败切换
-    type: fallback
-    use:
-      - node
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 120      
+      - 🚀 节点选择
   - name: 🛑 全球拦截
     type: select
     proxies:
@@ -63,15 +45,21 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+  - name: ♻️ 自动选择
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - sub
 proxy-providers:
-  node:
+  sub:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?speed=10" # 替换自己的节点
-    interval: 240
-    path: proxy_provider/node.yaml
+    url: "https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Profiles/sub.list" # 替换自己的节点
+    interval: 3600
+    path: proxy_provider/sub.yaml
     health-check:
       enable: true
-      interval: 60
+      interval: 600
       url: http://www.gstatic.com/generate_204
       
 rule-providers:
@@ -192,20 +180,21 @@ rules:
 #PROCESS-NAME：源进程名匹配
 #RULE-SET：Rule Provider 规则匹配
 #MATCH：全匹配
-  - DOMAIN-SUFFIX,acl4ssr,🌐 全球直连
-  - PROCESS-NAME,v2ray,🌐 全球直连
-  - DOMAIN,clash.razord.top,🌐 全球直连
-  - DOMAIN,yacd.haishan.me,🌐 全球直连 
-  - RULE-SET,Private,🌐 全球直连
-  - RULE-SET,Pter,🌐 全球直连
+  - DOMAIN-SUFFIX,acl4ssr,🎯 全球直连
+  - PROCESS-NAME,v2ray,🎯 全球直连
+  - DOMAIN,clash.razord.top,🎯 全球直连
+  - DOMAIN,yacd.haishan.me,🎯 全球直连 
+  - DOMAIN,homedepot.com,🎯 全球直连  #仅适用与REX出口网
+  - RULE-SET,Private,🎯 全球直连
   - RULE-SET,Reject,🛑 全球拦截
-  - RULE-SET,Icloud,🌐 全球直连
-  - RULE-SET,Apple,🌐 全球直连
-  - RULE-SET,Google,🌐 全球直连
+  - RULE-SET,Pter,🎯 全球直连
+  - RULE-SET,Icloud,🎯 全球直连
+  - RULE-SET,Apple,🎯 全球直连
+  - RULE-SET,Google,🎯 全球直连
   - RULE-SET,Proxy,♻️ 自动选择
-  - RULE-SET,Direct,🌐 全球直连
+  - RULE-SET,Direct,🎯 全球直连
   - RULE-SET,Telegramcidr,♻️ 自动选择
   - RULE-SET,BanAD,🛑 全球拦截
-  - GEOIP,,🌐 全球直连
-  - GEOIP,CN,🌐 全球直连
+  - GEOIP,,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
   - MATCH,♻️ 自动选择
