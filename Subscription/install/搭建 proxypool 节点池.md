@@ -49,7 +49,7 @@ wget https://dl.google.com/go/go1.16.4.linux-amd64.tar.gz
 执行 tar 解压到 /usr/loacl 目录下（官方推荐），得到 go 文件夹等
 
 ```
-tar -C /usr/local -zxvf  go1.16.4.linux-amd64.tar.gz
+tar -C /usr/local -zxvf go1.16.4.linux-amd64.tar.gz
 ```
 
 添加 /usr/loacl/go/bin 目录到 PATH 变量中。添加到 /etc/profile 或 $HOME/.profile 都可以
