@@ -165,7 +165,7 @@ go run main.go -c ./config/config.yaml
 
 自行修改 /www/wwwroot/proxypool/assets/html/ 下的 html 文件，请务必保留原作者版权信息！！！不要逼着大佬删库
 
-修改后将 /www/wwwroot/proxypool/docs/ 下的 genbindata.sh 移动到程序根目录下，也就是 /www/wwwroot/proxypool/下，千万不要在docs目录下运行
+修改后在 /www/wwwroot/proxypool/下，千万不要在docs目录下运行
 
 然后运行 
 
