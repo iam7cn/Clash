@@ -144,7 +144,7 @@ mv /www/wwwroot/proxypool/proxypool-0.7.1/* /www/wwwroot/proxypool/
 
 修改 /config/config.yaml 中的网址，为你要用的网址。端口建议保持默认。抓取频率和速度等自己设定。[配置文件说明](https://github.com/Sansui233/proxypool/wiki/配置文件说明)
 
-我是开了个 screen 运行 main.go，screen 使用方法参考[这里](./Linux 下 screen 命令基本用法.md)
+我是开了个 screen 运行 main.go，screen 使用方法参考[这里](./Linux下screen命令基本用法.md)
 
 screen 窗口中运行（程序根目录下）
 
