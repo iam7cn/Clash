@@ -87,11 +87,9 @@ curl http://127.0.0.1:80
 
 2.域名反向代理http://127.0.0.1:12580
 
-3.申请免费SSL
-
 ![反代](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Subscription/install/Reproxy.png)
 
-
+3.申请免费SSL
 
 ## 配置文件
 
