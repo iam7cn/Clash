@@ -1,4 +1,4 @@
-CentOS 下安装
+﻿CentOS 下安装
 
 ```
 yum install screen

@@ -1,4 +1,4 @@
-源项目地址：https://github.com/zu1k/proxypool    Fork版: https://github.com/Sansui233/proxypool
+﻿源项目地址：https://github.com/zu1k/proxypool    Fork版: https://github.com/Sansui233/proxypool
 
 可参考 [部署到VPS Step by Step · Sansui233/proxypool Wiki](https://github.com/Sansui233/proxypool/wiki/部署到VPS-Step-by-Step)
 
