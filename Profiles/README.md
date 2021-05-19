@@ -144,7 +144,7 @@ proxy-providers:
 
 [Free Proxies (purel.in)](https://proxy.purel.in/)
 
-
+更多订阅池 [点击进入](https://raw.githubusercontent.com/iam7cn/Clash/main/Subscription/sub.list)
 
 
 # 客户端的使用
