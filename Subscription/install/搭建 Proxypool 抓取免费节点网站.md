@@ -89,7 +89,7 @@ curl http://127.0.0.1:80
 
 3.申请免费SSL
 
-![image-20210519152022782](C:\Users\gc02\AppData\Roaming\Typora\typora-user-images\image-20210519152022782.png)
+![反代](https://cdn.jsdelivr.net/gh/iam7cn/Clash@main/Subscription/install/Reproxy.png)
 
 
 
