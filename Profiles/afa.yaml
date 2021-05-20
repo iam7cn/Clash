@@ -182,7 +182,7 @@ proxy-groups:
 proxy-providers:
   China:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?c=CN&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?c=CN&speed=1"
     path: proxy_provider/provider-China.yaml
     interval: 60
     health-check:
@@ -191,7 +191,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   HongKong:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?c=HK&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?c=HK&speed=1"
     path: proxy_provider/provider-HongKong.yaml
     interval: 60
     health-check:
@@ -200,7 +200,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   Taiwan:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?c=TW&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?c=TW&speed=1"
     path: proxy_provider/provider-Taiwan.yaml
     interval: 60
     health-check:
@@ -209,7 +209,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204 
   Speed:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?speed=10"
+    url: "https://free.kingfu.cf/clash/proxies?speed=10"
     path: proxy_provider/provider-Speed.yaml
     interval: 60
     health-check:
@@ -218,7 +218,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204      
   Relay:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?filter=1&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?filter=1&speed=1"
     path: proxy_provider/provider-Relay.yaml
     interval: 60
     health-check:
@@ -227,7 +227,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   Pool:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?filter=2&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?filter=2&speed=1"
     path: proxy_provider/provider-Pool.yaml
     interval: 60
     health-check:
@@ -236,7 +236,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204 
   ss:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?type=ss&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?type=ss&speed=1"
     path: proxy_provider/provider-ss.yaml
     interval: 60
     health-check:
@@ -245,7 +245,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   ssr:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?type=ssr&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?type=ssr&speed=1"
     path: proxy_provider/provider-ssr.yaml
     interval: 60
     health-check:
@@ -254,7 +254,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   v2ray:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?type=vmess&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?type=vmess&speed=1"
     path: proxy_provider/provider-vmess.yaml
     interval: 60
     health-check:
@@ -263,7 +263,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204 
   trojan:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?type=trojan&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?type=trojan&speed=1"
     path: proxy_provider/provider-trojan.yaml
     interval: 60
     health-check:
@@ -272,7 +272,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204      
   Asia:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?c=JP,KR,RU,SG,IN,VN,TH,MY,PH,ID,NZ&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?c=JP,KR,RU,SG,IN,VN,TH,MY,PH,ID,NZ&speed=1"
     path: proxy_provider/provider-Asia.yaml
     interval: 60
     health-check:
@@ -281,7 +281,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204      
   America:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?c=US,CA,MX&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?c=US,CA,MX&speed=1"
     path: proxy_provider/provider-America.yaml
     interval: 60
     health-check:
@@ -290,7 +290,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   Oceania:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?c=AU,NL&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?c=AU,NL&speed=1"
     path: proxy_provider/provider-Oceania.yaml
     interval: 60
     health-check:
@@ -299,7 +299,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   Europe:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?c=DE,GB,FR,DK,ES,FZ,EE,HR,LT,LU,AL,CH,BE,FI&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?c=DE,GB,FR,DK,ES,FZ,EE,HR,LT,LU,AL,CH,BE,FI&speed=1"
     path: proxy_provider/provider-Europe.yaml
     interval: 60
     health-check:
@@ -308,7 +308,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   others:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?nc=CN,HK,TW,JP,KR,RU,SG,IN,VN,TH,MY,PH,ID,NZ,US,CA,MX,AU,NL,DE,GB,FR,DK,ES,FZ,EE,HR,LT,LU,AL,CH,BE,FI&speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?nc=CN,HK,TW,JP,KR,RU,SG,IN,VN,TH,MY,PH,ID,NZ,US,CA,MX,AU,NL,DE,GB,FR,DK,ES,FZ,EE,HR,LT,LU,AL,CH,BE,FI&speed=1"
     path: proxy_provider/provider-others.yaml
     interval: 60
     health-check:
@@ -317,7 +317,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   all:
     type: http
-    url: "Http://192.168.73.3/clash/proxies?speed=1"
+    url: "https://free.kingfu.cf/clash/proxies?speed=1"
     path: proxy_provider/provider.yaml
     interval: 60
     health-check:
