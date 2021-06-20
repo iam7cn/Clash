@@ -30,13 +30,14 @@ proxy-groups:
       - 💱 选择类型
       - 🚀 选择速度
       - 👉 选择节点
+      - 🔔 订阅节点
       - 🔃 失败切换
       - 🔀 负载均衡
       - 🌐 全球直连
   - name: 👉 选择节点
     type: select
     use:
-      - all      
+      - Global      
   - name: 🏳️‍🌈 选择国家
     type: select
     proxies:
@@ -45,8 +46,10 @@ proxy-groups:
       - 🇹🇼 台湾节点     
       - 🇨🇳 亚洲节点
       - 🇺🇸 北美节点
+      - 🇵🇾 南美节点
       - 🇦🇺 澳洲节点
       - 🇬🇧 欧洲节点
+      - 🇿🇦 非洲节点
       - 🏴‍☠️ 其他国家
   - name: 💱 选择类型
     type: select
@@ -60,43 +63,76 @@ proxy-groups:
     proxies:
       - 🚓 Speed节点
       - 🚑 中转节点
-      - 🚒 Pool节点  
-  - name: 🇨🇳 中国节点
+      - 🚒 Pool节点
+  - name: 📲 电报消息
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 📹 油管视频
+    type: select
+    proxies:      
+      - 🇹🇼 台湾节点
+      - 🇭🇰 香港节点
+      - 🚓 Speed节点
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 🎥 奈飞视频
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 🎬 哔哩哔哩
+    type: select
+    proxies:
+      - 🌐 全球直连
+      - ♻️ 自动选择      
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连       
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - 🌐 全球直连
+      - ♻️ 自动选择
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: Ⓜ️ 微软云盘
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - ♻️ 自动选择      
+      - 🌐 全球直连
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🔔 订阅节点
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 120
     use:
-      - China
-  - name: 🇭🇰 香港节点
-    type: url-test
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 120
-    use:
-      - HongKong
-  - name: 🇹🇼 台湾节点
-    type: url-test
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 120
-    use:
-      - Taiwan
-  - name: 🚓 Speed节点
-    type: url-test
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 120
-    use:
-      - Speed      
-  - name: 🚑 中转节点
-    type: url-test
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 120
-    use:
-      - Relay 
-  - name: 🚒 Pool节点
-    type: url-test
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 120
-    use:
-      - Pool  
+      - Favorites      
   - name: ♠️ SS节点
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
@@ -120,7 +156,43 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204'
     interval: 120
     use:
-      - trojan      
+      - trojan 
+  - name: 🚓 Speed节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Speed      
+  - name: 🚑 中转节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Relay 
+  - name: 🚒 Pool节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Pool      
+  - name: 🇨🇳 中国节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - China
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - HongKong
+  - name: 🇹🇼 台湾节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Taiwan      
   - name: 🇨🇳 亚洲节点
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
@@ -132,7 +204,13 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204'
     interval: 120
     use:
-      - America
+      - North America
+  - name: 🇵🇾 南美节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - South America   
   - name: 🇦🇺 澳洲节点
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
@@ -145,6 +223,12 @@ proxy-groups:
     interval: 120
     use:
       - Europe
+  - name: 🇿🇦 非洲节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Africa
   - name: 🏴‍☠️ 其他国家
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
@@ -154,26 +238,21 @@ proxy-groups:
   - name: ♻️ 自动选择
     type: url-test
     use:
-      - all
+      - Global
     url: 'http://www.gstatic.com/generate_204'
     interval: 120
   - name: 🔀 负载均衡
     type: load-balance
     use:
-      - all
+      - Global
     url: 'http://www.gstatic.com/generate_204'
     interval: 120
   - name: 🔃 失败切换
     type: fallback
     use:
-      - all
+      - Global
     url: 'http://www.gstatic.com/generate_204'
     interval: 120
-  - name: 🛑 广告拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
   - name: 🌐 全球直连
     type: select
     proxies:
@@ -182,8 +261,8 @@ proxy-groups:
 proxy-providers:
   China:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?c=CN&speed=1"
-    path: proxy_provider/provider-China.yaml
+    url: "https://free.kingfu.cf/clash/proxies?c=CN&speed=5"
+    path: ./proxy_provider/Provider-China.yaml
     interval: 60
     health-check:
       enable: true
@@ -191,8 +270,8 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   HongKong:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?c=HK&speed=1"
-    path: proxy_provider/provider-HongKong.yaml
+    url: "https://free.kingfu.cf/clash/proxies?c=HK&speed=5"
+    path: ./proxy_provider/Provider-HongKong.yaml
     interval: 60
     health-check:
       enable: true
@@ -200,8 +279,8 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   Taiwan:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?c=TW&speed=1"
-    path: proxy_provider/provider-Taiwan.yaml
+    url: "https://free.kingfu.cf/clash/proxies?c=TW&speed=5"
+    path: ./proxy_provider/Providerr-Taiwan.yaml
     interval: 60
     health-check:
       enable: true
@@ -210,7 +289,7 @@ proxy-providers:
   Speed:
     type: http
     url: "https://free.kingfu.cf/clash/proxies?speed=10"
-    path: proxy_provider/provider-Speed.yaml
+    path: ./proxy_provider/Provider-Speed.yaml
     interval: 60
     health-check:
       enable: true
@@ -218,8 +297,8 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204      
   Relay:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?filter=1&speed=1"
-    path: proxy_provider/provider-Relay.yaml
+    url: "https://free.kingfu.cf/clash/proxies?filter=1&speed=5"
+    path: ./proxy_provider/Provider-Relay.yaml
     interval: 60
     health-check:
       enable: true
@@ -227,8 +306,8 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   Pool:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?filter=2&speed=1"
-    path: proxy_provider/provider-Pool.yaml
+    url: "https://free.kingfu.cf/clash/proxies?filter=2&speed=5"
+    path: ./proxy_provider/Provider-Pool.yaml
     interval: 60
     health-check:
       enable: true
@@ -236,8 +315,8 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204 
   ss:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?type=ss&speed=1"
-    path: proxy_provider/provider-ss.yaml
+    url: "https://free.kingfu.cf/clash/proxies?type=ss&speed=5"
+    path: ./proxy_provider/Provider-ss.yaml
     interval: 60
     health-check:
       enable: true
@@ -245,8 +324,8 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   ssr:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?type=ssr&speed=1"
-    path: proxy_provider/provider-ssr.yaml
+    url: "https://free.kingfu.cf/clash/proxies?type=ssr&speed=5"
+    path: ./proxy_provider/Provider-ssr.yaml
     interval: 60
     health-check:
       enable: true
@@ -254,8 +333,8 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   v2ray:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?type=vmess&speed=1"
-    path: proxy_provider/provider-vmess.yaml
+    url: "https://free.kingfu.cf/clash/proxies?type=vmess&speed=5"
+    path: ./proxy_provider/Provider-vmess.yaml
     interval: 60
     health-check:
       enable: true
@@ -263,8 +342,8 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204 
   trojan:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?type=trojan&speed=1"
-    path: proxy_provider/provider-trojan.yaml
+    url: "https://free.kingfu.cf/clash/proxies?type=trojan&speed=5"
+    path: ./proxy_provider/Provider-trojan.yaml
     interval: 60
     health-check:
       enable: true
@@ -272,17 +351,26 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204      
   Asia:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?c=JP,KR,RU,SG,IN,VN,TH,MY,PH,ID,NZ&speed=1"
-    path: proxy_provider/provider-Asia.yaml
+    url: "https://free.kingfu.cf/clash/proxies?c=AF,AM,AZ,PS,BH,BD,BT,BN,KH,CY,TL,EG,IN,ID,IR,IQ,IL,JP,JO,KZ,KW,KG,LA,LB,MY,MV,MN,MM,NP,KP,OM,PK,CN,PH,QA,TW,RU,SA,SG,KR,LK,SY,TJ,TH,TR,TM,GE,AE,UZ,VN,YE&speed=5"
+    path: ./proxy_provider/Provider-Asia.yaml
     interval: 60
     health-check:
       enable: true
       interval: 120
       url: http://www.gstatic.com/generate_204      
-  America:
+  North America:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?c=US,CA,MX&speed=1"
-    path: proxy_provider/provider-America.yaml
+    url: "https://free.kingfu.cf/clash/proxies?c=AG,BS,BB,BZ,CA,CR,CU,DM,DO,SV,GD,GT,HT,HN,JM,MX,NI,PA,KN,LC,VC,TT,US&speed=5"
+    path: ./proxy_provider/Provider-North America.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  South America:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?c=AR,BO,BR,CL,CO,EC,GY,PY,PE,SR,TT,UY,VE&speed=5"
+    path: ./proxy_provider/Provider-South America.yaml
     interval: 60
     health-check:
       enable: true
@@ -290,8 +378,8 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   Oceania:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?c=AU,NL&speed=1"
-    path: proxy_provider/provider-Oceania.yaml
+    url: "https://free.kingfu.cf/clash/proxies?c=AU,TL,FJ,CK,ID,KI,MH,FM,NR,NZ,PW,PG,WS,SB,NU,TO,TV,VU&speed=5"
+    path: ./proxy_provider/Provider-Oceania.yaml
     interval: 60
     health-check:
       enable: true
@@ -299,26 +387,44 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   Europe:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?c=DE,GB,FR,DK,ES,FZ,EE,HR,LT,LU,AL,CH,BE,FI&speed=1"
-    path: proxy_provider/provider-Europe.yaml
+    url: "https://free.kingfu.cf/clash/proxies?c=AL,AD,AT,BY,BE,BA,BG,HR,CZ,DK,EE,FI,FR,DE,DR,HU,IS,IE,IT,XK,LV,LI,LT,LU,MT,MK,MD,MC,ME,NL,NO,PL,PT,RO,TU,SM,RS,SK,SI,ES,SE,CH,TR,UA,GB,VA&speed=5"
+    path: ./proxy_provider/Provider-Europe.yaml
     interval: 60
     health-check:
       enable: true
       interval: 120
       url: http://www.gstatic.com/generate_204
+  Africa:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?c=DZ,AO,BJ,BW,BF,CM,CV,CF,TD,KM,CI,CD,DJ,EG,GQ,ER,ET,GA,GM,GH,GN,GW,KE,LS,LR,LY,MG,MW,ML,MR,MU,MA,MZ,NA,NE,NG,CG,RW,ST,SN,SC,SL,SO,SS,ZA,SD,SZ,TZ,TG,TN,UG,EH,ZM,ZW&speed=5"
+    path: ./proxy_provider/Provider-Africa.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204     
   others:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?nc=CN,HK,TW,JP,KR,RU,SG,IN,VN,TH,MY,PH,ID,NZ,US,CA,MX,AU,NL,DE,GB,FR,DK,ES,FZ,EE,HR,LT,LU,AL,CH,BE,FI&speed=1"
-    path: proxy_provider/provider-others.yaml
+    url: "https://free.kingfu.cf/clash/proxies?nc=CN,HK,TW,JP,KR,RU,SG,IN,VN,TH,MY,PH,ID,NZ,US,CA,MX,AU,NL,DE,GB,FR,DK,ES,FZ,EE,HR,LT,LU,AL,CH,BE,FI&speed=5"
+    path: ./proxy_provider/Provider-others.yaml
     interval: 60
     health-check:
       enable: true
       interval: 120
       url: http://www.gstatic.com/generate_204
-  all:
+  Global:
     type: http
     url: "https://free.kingfu.cf/clash/proxies?speed=1"
-    path: proxy_provider/provider.yaml
+    path: ./proxy_provider/Provider.yaml
+    interval: 60
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  Favorites:
+    type: http
+    url: "https://hao.iam7.cn/Clash/Profiles/sub.list"
+    path: ./proxy_provider/Favorites.yaml
     interval: 60
     health-check:
       enable: true
