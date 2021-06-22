@@ -70,7 +70,7 @@ proxy-groups:
       - 🇹🇼 台湾节点
       - 🇭🇰 香港节点
       - 🚓 Speed节点    
-      - ♻️ 自动选择      
+      - 🎯 全局选择      
       - 🌐 全球直连
   - name: 📹 油管视频
     type: select
@@ -78,7 +78,7 @@ proxy-groups:
       - 🇹🇼 台湾节点
       - 🇭🇰 香港节点
       - 🚓 Speed节点
-      - ♻️ 自动选择      
+      - 🎯 全局选择      
       - 🌐 全球直连
   - name: 🎥 奈飞视频
     type: select
@@ -89,13 +89,13 @@ proxy-groups:
       - 🇺🇸 北美节点
       - 🚓 Speed节点
       - 🔔 订阅节点    
-      - ♻️ 自动选择      
+      - 🎯 全局选择      
       - 🌐 全球直连
   - name: 🎬 哔哩哔哩
     type: select
     proxies:
       - 🌐 全球直连
-      - ♻️ 自动选择      
+      - 🎯 全局选择      
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -105,18 +105,18 @@ proxy-groups:
       - 🇺🇸 北美节点
       - 🚓 Speed节点
       - 🔔 订阅节点    
-      - ♻️ 自动选择      
+      - 🎯 全局选择      
       - 🌐 全球直连       
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🌐 全球直连
-      - ♻️ 自动选择     
+      - 🎯 全局选择     
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🌐 全球直连
-      - ♻️ 自动选择
+      - 🎯 全局选择
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -126,7 +126,7 @@ proxy-groups:
       - 🇺🇸 北美节点
       - 🚓 Speed节点
       - 🔔 订阅节点    
-      - ♻️ 自动选择      
+      - 🎯 全局选择      
       - 🌐 全球直连
   - name: Ⓜ️ 微软云盘
     type: select
@@ -138,7 +138,7 @@ proxy-groups:
       - 🇺🇸 北美节点
       - 🚓 Speed节点
       - 🔔 订阅节点    
-      - ♻️ 自动选择
+      - 🎯 全局选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -149,7 +149,7 @@ proxy-groups:
       - 🇺🇸 北美节点
       - 🚓 Speed节点
       - 🔔 订阅节点
-      - ♻️ 自动选择
+      - 🎯 全局选择
   - name: 🎮 游戏平台
     type: select
     proxies:
@@ -159,7 +159,7 @@ proxy-groups:
       - 🇺🇸 北美节点
       - 🚓 Speed节点
       - 🔔 订阅节点
-      - ♻️ 自动选择
+      - 🎯 全局选择
   - name: 🛑 广告拦截
     type: select
     proxies:
