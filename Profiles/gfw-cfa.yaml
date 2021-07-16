@@ -1,4 +1,4 @@
-﻿# 所有节点均从公开互联网上抓取，使用clash自动检查可用性即可
+# 所有节点均从公开互联网上抓取，使用clash自动检查可用性即可
 # 配置文件已开源： https://github.com/iam7cn/Clash
 
 # port of HTTP
@@ -24,6 +24,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ️‍🌈 港澳台新
       - 👉 选择节点
       - 🔀 负载均衡
       - 🔃 失败切换
@@ -31,8 +32,14 @@ proxy-groups:
   - name: 👉 选择节点
     type: select
     use:
-      - node
+      - auto
   - name: ♻️ 自动选择
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - auto
+  - name: ️‍🌈 港澳台新
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 120
@@ -41,7 +48,7 @@ proxy-groups:
   - name: 🔀 负载均衡
     type: load-balance
     use:
-      - node
+      - auto
     url: 'http://www.gstatic.com/generate_204'
   - name: 🌐 全球直连
     type: select
@@ -50,7 +57,7 @@ proxy-groups:
   - name: 🔃 失败切换
     type: fallback
     use:
-      - node
+      - auto
     url: 'http://www.gstatic.com/generate_204'
     interval: 120      
   - name: 🛑 全球拦截
@@ -67,9 +74,18 @@ proxy-groups:
 proxy-providers:
   node:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?filter=3&c=CN,HK,TW,JP,KR,SG,US,ZZ&speed=10" # 替换自己的节点
+    url: "https://free.kingfu.cf/clash/proxies?filter=3&c=CN,HK,TW,JP,KR,SG,ZZ&speed=10" # 替换自己的节点
     interval: 240
     path: github/node.yaml
+    health-check:
+      enable: true
+      interval: 60
+      url: http://www.gstatic.com/generate_204
+  auto:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?speed=10" # 替换自己的节点
+    interval: 240
+    path: github/auto.yaml
     health-check:
       enable: true
       interval: 60
