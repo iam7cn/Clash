@@ -8,6 +8,6 @@ proxies:
   - {name: 🇺🇸 US-CN2-01, server: us.gotochinatown.net, port: 10886, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇺🇸 US-CN2-04, server: us.gotochinatown.net, port: 10887, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇹🇷 伊斯坦布尔, server: tr.gotochinatown.net, port: 10885, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
-  - {name: 🇹🇼 台湾[高QoS], server: tw.gotochinatown.net, port: 10881, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
+  - {name: 🇹🇼 台湾高QoS, server: tw.gotochinatown.net, port: 10881, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇮🇳 孟买, server: in.gotochinatown.net, port: 10884, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇯🇵 日本原生, server: jpl.gotochinatown.net, port: 10888, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
