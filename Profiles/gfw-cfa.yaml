@@ -19,12 +19,14 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {"name":"🇨🇳 CN_001","server":"192.168.1.1","type":"ss","country":"🇨🇳 CN","port":443,"password":"iam7.cn","cipher":"aes-128-gcm","plugin":"obfs","plugin-opts":{"host":"www.iam7.cn","mode":"tls"}} 
+
 proxy-groups:
   - name: 🎯 全局选择
     type: select
     proxies:
       - ♻️ 自动选择
       - ️‍🌈 港澳台新
+      - 🔔 订阅节点
       - 👉 选择节点
       - 🔀 负载均衡
       - 🔃 失败切换
@@ -32,19 +34,25 @@ proxy-groups:
   - name: 👉 选择节点
     type: select
     use:
-      - auto
+      - auto     
   - name: ♻️ 自动选择
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 120
     use:
-      - auto
+      - auto      
   - name: ️‍🌈 港澳台新
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 120
     use:
       - node
+  - name: 🔔 订阅节点
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 120
+    use:
+      - Favorites      
   - name: 🔀 负载均衡
     type: load-balance
     use:
@@ -71,7 +79,16 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
   
-proxy-providers:
+proxy-providers:  
+  auto:
+    type: http
+    url: "https://free.kingfu.cf/clash/proxies?speed=10" # 替换自己的节点
+    interval: 240
+    path: github/auto.yaml
+    health-check:
+      enable: true
+      interval: 60
+      url: http://www.gstatic.com/generate_204
   node:
     type: http
     url: "https://free.kingfu.cf/clash/proxies?filter=3&c=CN,HK,TW,JP,KR,SG,ZZ&speed=10" # 替换自己的节点
@@ -81,11 +98,11 @@ proxy-providers:
       enable: true
       interval: 60
       url: http://www.gstatic.com/generate_204
-  auto:
+  Favorites:
     type: http
-    url: "https://free.kingfu.cf/clash/proxies?speed=10" # 替换自己的节点
+    url: "https://hao.iam7.cn/Clash/Profiles/sub.list"
+    path: github/Favorites.yaml
     interval: 240
-    path: github/auto.yaml
     health-check:
       enable: true
       interval: 60
