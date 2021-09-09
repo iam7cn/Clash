@@ -15,7 +15,7 @@
 ::: tip
 如无特殊说明，缩写**CFW**指代 Clash for Windows
 
-推荐用Clash for Windows
+推荐用Clash for Windows 支持windows和Mac Os
 
 由于个人精力有限，欢迎一起参与完善
 :::
