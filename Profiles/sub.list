@@ -1,13 +1,33 @@
-proxies:
+ proxies:
   - {name: 🇭🇰 HKBGP, server: cm.stunnel.vip, port: 4700, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇭🇰 HKBGP-PRO, server: cm-hk.stunnel.vip, port: 4800, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇯🇵 JP-BGP, server: jp.stunnel.vip, port: 6300, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇬🇧 London, server: uk.gotochinatown.net, port: 10882, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
-  - {name: 🇨🇳 Saint Petersburg, server: ru.gotochinatown.net, port: 10883, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
+  - {name: 🇷🇺 Saint Petersburg, server: ru.gotochinatown.net, port: 10883, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇺🇸 US-BGP, server: cm-us.stunnel.vip, port: 3300, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇺🇸 US-CN2-01, server: us.gotochinatown.net, port: 10886, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇺🇸 US-CN2-04, server: us.gotochinatown.net, port: 10887, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇹🇷 伊斯坦布尔, server: tr.gotochinatown.net, port: 10885, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇹🇼 台湾高QoS, server: tw.gotochinatown.net, port: 10881, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
   - {name: 🇮🇳 孟买, server: in.gotochinatown.net, port: 10884, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
-  - {name: 🇯🇵 日本原生, server: jpl.gotochinatown.net, port: 10888, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}
+  - {name: 🇯🇵 日本原生, server: jpl.gotochinatown.net, port: 10888, type: http, username: yaojiayu246@gmail.com, password: 33a6e7b02dcc6f79ffae792369085774, tls: true}  
+  - {name: 🇭🇰 A-HKBGP, server: pccw.stunnel.vip, port: 4700, type: http, username: yaojiayu246@gmail.com, password: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, tls: true}
+  - {name: 🇹🇼 A-台湾, server: tw.gotochinatown.net, port: 10881, type: http, username: yaojiayu246@gmail.com, password: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, tls: true}
+  - {name: 🇮🇳 A-印度, server: in.gotochinatown.net, port: 10884, type: http, username: yaojiayu246@gmail.com, password: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, tls: true}
+  - {name: 🇳🇿 A-新西兰, server: nz.gotochinatown.net, port: 10920, type: http, username: yaojiayu246@gmail.com, password: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, tls: true}
+  - {name: 🇦🇺 A-澳大利亚, server: au.gotochinatown.net, port: 10930, type: http, username: yaojiayu246@gmail.com, password: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, tls: true}
+  - {name: 🇬🇧 A-英国, server: uk.gotochinatown.net, port: 10882, type: http, username: yaojiayu246@gmail.com, password: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, tls: true}
+  - {name: 🇷🇺 A-俄罗斯, server: ru.gotochinatown.net, port: 10883, type: http, username: yaojiayu246@gmail.com, password: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, tls: true}
+  - {name: 🇹🇷 A-土耳其, server: tr.gotochinatown.net, port: 10885, type: http, username: yaojiayu246@gmail.com, password: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, tls: true}
+  - {name: 🇩🇪 A-德国, server: de.gotochinatown.net, port: 10887, type: http, username: yaojiayu246@gmail.com, password: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, tls: true}
+  - {name: 🇫🇷 A-法国, server: fr.gotochinatown.net, port: 10910, type: http, username: yaojiayu246@gmail.com, password: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, tls: true}  
+  - {name: 🇭🇰 B-HKBGP, server: pccw.stunnel.vip, port: 4700, type: http, username: 328206393@qq.com, password: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, tls: true}
+  - {name: 🇹🇼 B-台湾, server: tw.gotochinatown.net, port: 10881, type: http, username: 328206393@qq.com, password: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, tls: true}
+  - {name: 🇮🇳 B-印度, server: in.gotochinatown.net, port: 10884, type: http, username: 328206393@qq.com, password: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, tls: true}
+  - {name: 🇳🇿 B-新西兰, server: nz.gotochinatown.net, port: 10920, type: http, username: 328206393@qq.com, password: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, tls: true}
+  - {name: 🇦🇺 B-澳大利亚, server: au.gotochinatown.net, port: 10930, type: http, username: 328206393@qq.com, password: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, tls: true}
+  - {name: 🇬🇧 B-英国, server: uk.gotochinatown.net, port: 10882, type: http, username: 328206393@qq.com, password: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, tls: true}
+  - {name: 🇷🇺 B-俄罗斯, server: ru.gotochinatown.net, port: 10883, type: http, username: 328206393@qq.com, password: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, tls: true}
+  - {name: 🇹🇷 B-土耳其, server: tr.gotochinatown.net, port: 10885, type: http, username: 328206393@qq.com, password: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, tls: true}
+  - {name: 🇩🇪 B-德国, server: de.gotochinatown.net, port: 10887, type: http, username: 328206393@qq.com, password: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, tls: true}
+  - {name: 🇫🇷 B-法国, server: fr.gotochinatown.net, port: 10910, type: http, username: 328206393@qq.com, password: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, tls: true}
