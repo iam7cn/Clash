@@ -16,5 +16,18 @@
 | PAC  | https://ssrtool.us/static/pac.txt   |  
 | GFWlist  | https://github.com/gfwlist/gfwlist   | 
 
+## 免费SSR账号
 
+网站：https://fanqiang.network/
+网站：https://www.youneed.win/free-ssr
+
+控制台代码
+
+```
+var SSRs=[];
+$$('table>tbody>tr').forEach(function(tr){
+SSRs.push(tr.children[0].children[0].getAttribute("data"));
+});
+console.log(SSRs.join("\n"));
+```
 
