@@ -42,7 +42,10 @@ http://104.128.81.6:8080/clash/proxies
 https://upan.tk/clash/proxies
 https://www.linbaoz.com/clash/proxies
 https://proxies.bihai.cf/clash/proxies
-
+http://42.194.196.226/clash/proxies
+https://klausvpn.posyao.com/clash/proxies
+http://118.31.77.3/clash/proxies
+https://ednovas.design/clash/proxies
 
 
 # 谷歌上网助手APP 2021/7/6
@@ -61,6 +64,10 @@ https://raw.githubusercontent.com/Alvin9999/PAC/master/SSROT/config.json
 https://raw.githubusercontent.com/Alvin9999/pac2/master/ssconfig.txt
 https://raw.githubusercontent.com/Alvin9999/pac2/master/SS-Kcptun/ssconfig.txt
 https://raw.githubusercontent.com/alanbobs999/TopFreeProxies/master/sub/sub_merge_yaml.yml
+https://raw.githubusercontent.com/adiwzx/freenode/main/adispeed.yml
+https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet.yml
+https://raw.githubusercontent.com/adiwzx/freenode/main/adispeed.txt
+
 
 #订阅节点 2021-4-19
 https://xiaoyaoniubi.netlify.app/
